@@ -3,8 +3,8 @@ import axios from "axios";
 const getDataElit = async () => {
   try {
     const data = JSON.stringify({
-      user_id: procces.env.ELIT_USER_ID,
-      token: procces.env.ELIT_TOKEN,
+      user_id: process.env.ELIT_USER_ID,
+      token: process.env.ELIT_TOKEN,
     });
 
     const config = {
@@ -24,7 +24,7 @@ const getDataElit = async () => {
 
 const getDataAir = async () => {
   try {
-    const pathAir = `https://www.air-intra.com/intra/portal/consart.php?${procces.env.AIR_TOKEN}&TEXTO=*ssd%20480`;
+    const pathAir = `https://www.air-intra.com/intra/portal/consart.php?${process.env.AIR_TOKEN}&TEXTO=*ssd%20480`;
     const config = {
       method: "post",
       url: pathAir,
